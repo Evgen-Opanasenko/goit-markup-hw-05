@@ -192,7 +192,7 @@ img {
   line-height: 1.9;
 }
 /*                      button */
-.button {
+.abutton {
   color: var(--bg-color);
   background-color: var(--hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -212,11 +212,11 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-button:hover {
+.abutton:hover {
   color: var(--text-focus-color);
   background-color: #188ce8;
 }
-button:focus {
+.abutton:focus {
   color: var(--text-focus-color);
   background-color: #188ce8;
 }
@@ -321,7 +321,7 @@ button:focus {
   padding-top: 201px;
   padding-bottom: 199px;
 }
-.section-hero .button {
+.section-hero .abutton {
   margin-left: auto;
   margin-right: auto;
 }
@@ -504,7 +504,7 @@ button:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover .client-item:not(:last-child) {
+.client-item:not(:last-child) {
   margin-right: 30px;
 }
 .client-link:hover {
@@ -561,9 +561,6 @@ button:focus {
 }
 .variety {
   margin-top: 4px;
-}
-.text-btn {
-  padding: 6px 22px;
 }
 
 .portfolio-psevdo-link {
@@ -649,4 +646,54 @@ footer .item:not(:last-child) {
 }
 .footer .soc-link:hover {
   background-color: var(--hover-color);
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  transition: opacity 1000ms cubic-bezier (0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  width: 521px;
+  min-height: 581px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+  transition: transform 1000ms cubic-bezier (0.4, 0, 0.2, 1),
+    opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  padding-top: 4px;
+  padding-left: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: 0;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
 }
