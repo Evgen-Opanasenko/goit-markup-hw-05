@@ -221,6 +221,7 @@ img {
   background-color: #188ce8;
 }
 .button-portfolio {
+  padding: 6px 22px;
   color: var(--title-color);
   background-color: F5F4FA;
   font-weight: 500;
@@ -344,13 +345,13 @@ img {
   width: calc(100% / 4 - 30px);
 }
 .section-skill-list .big-icon {
-  padding-top: 25px;
-  padding-right: 100px;
-  padding-bottom: 25px;
-  padding-left: 100px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* class */
 
@@ -647,7 +648,7 @@ footer .item:not(:last-child) {
 .footer .soc-link:hover {
   background-color: var(--hover-color);
 }
-
+/* ===================backdrop============ */
 .backdrop {
   width: 100vw;
   height: 100vh;
@@ -681,8 +682,8 @@ footer .item:not(:last-child) {
   top: 8px;
   right: 8px;
   border-radius: 50%;
-  padding-top: 4px;
-  padding-left: 4px;
+  padding-top: 5px;
+  padding-left: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--bg-color);
 }
